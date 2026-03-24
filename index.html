@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav>
+  <span class="logo">Nkem Vincent</span>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="nc btn" style="padding:8px 18px;font-size:13px" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+<script>
+function toggleNav(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('nav-overlay').classList.toggle('open');}
+function closeNav(){document.getElementById('nav-links').classList.remove('open');document.getElementById('nav-overlay').classList.remove('open');}
+</script>
+<section class="hero" id="hero" style="background:#0a0f1e;color:#e8eeff"><div class="hi"><div class="avp">N</div><h1>Folio</h1><p class="jt">Software Engineering Student</p><p class="tl">Building things that matter. Open source contributor and hackathon finalist.</p><div class="hc"><a href="#projects" class="btn">See my projects</a><a href="#contact" class="btn btn-o">Get in touch</a></div></div></section>
+<section class="about" id="about" style="background:#111111;color:#c8d4ff"><div class="c"><div class="ag"><div><h2>About me</h2><p>Second-year CS student at UC Berkeley. I love building tools that make developers lives easier. Currently exploring distributed systems and machine learning pipelines.</p><div class="am"><div class="ami"><strong>Location</strong>Kigali, Rwanda</div><div class="ami"><strong>Email</strong><a href="mailto:n.nweke@alustudent.com">n.nweke@alustudent.com</a></div></div></div><div class="av2"></div></div></div></section>
+<section class="skills" id="skills" style="background:#050a18;color:#e8eeff"><div class="c"><h2>Tech stack</h2><div class="sg"><span class="st sp">Python</span><span class="st sd">JavaScript</span><span class="st so">React</span><span class="st sp">Node.js</span><span class="st sd">PostgreSQL</span><span class="st so">Docker</span><span class="st sp">Git</span><span class="st sd">Linux</span><span class="st so">C++</span><span class="st sp">Algorithms</span></div></div></section>
+<section class="projects" id="projects" style="background:#0a0f1e;color:#e8eeff"><div class="c"><h2>Projects</h2><div class="pg"><div class="pc"><img src="https://oaqmumphojikjaldzmwz.supabase.co/storage/v1/object/public/assets/7abb26dc-1d39-4f5e-9572-8809c34405ac/projects/1774310896192-495yrpnsy7d.png" alt="Enligne" class="pt-img"/><div class="pb"><h3>Enligne</h3><p>Food and Item delivery mobile app. </p><div class="pl"><a href="https://enligne-mine.vercel.app/" class="btn" target="_blank">Live ↗</a> <a href="https://github.com/Nkemakolamuko/enligne-mine" class="btn btn-o" target="_blank">GitHub</a></div></div></div><div class="pc"><img src="https://oaqmumphojikjaldzmwz.supabase.co/storage/v1/object/public/assets/7abb26dc-1d39-4f5e-9572-8809c34405ac/projects/1774310989328-w3ik42fpef9.png" alt="Parent Solution Rwanda" class="pt-img"/><div class="pb"><h3>Parent Solution Rwanda</h3><p>Dealers on all kinds of electricals... and an exporting and importing company</p><div class="pl"><a href="https://parentsolutiongroup.rw/" class="btn" target="_blank">Live ↗</a> <a href="https://github.com/Nkemakolamuko" class="btn btn-o" target="_blank">GitHub</a></div></div></div><div class="pc"><img src="https://oaqmumphojikjaldzmwz.supabase.co/storage/v1/object/public/assets/7abb26dc-1d39-4f5e-9572-8809c34405ac/projects/1774311280356-ft5nauctu84.png" alt="AFE Consulting Rwanda" class="pt-img"/><div class="pb"><h3>AFE Consulting Rwanda</h3><p>A consulting firm based and fully operational in Rwanda.</p><div class="pl"><a href="https://afeconsulting.rw/" class="btn" target="_blank">Live ↗</a> <a href="https://github.com/Nkemakolamuko" class="btn btn-o" target="_blank">GitHub</a></div></div></div></div></div></section>
+<section class="contact" id="contact" style="background:#0a0a0a;color:#702bcb"><div class="c"><h2>Say hello</h2><p class="sub">Open to internships, research roles, and interesting side projects.</p><div class="cl"><a href="mailto:n.nweke@alustudent.com">✉ Email</a><a href="https://www.linkedin.com/in/nkem-vincent-nweke/" target="_blank">in LinkedIn</a><a href="https://github.com/Nkemakolamuko" target="_blank">◎ GitHub</a><a href="https://twitter.com/NwekeVincent14" target="_blank">𝕏 Twitter</a></div></div></section>
+<footer style="background:#050a18;color:#2a3a66"><p>2026 - Nkem Vincent Nweke</p></footer>
+<script>
+  const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('section,footer').forEach(el=>{el.classList.add('fade-block');obs.observe(el);});
+</script>
+</body>
+</html>
